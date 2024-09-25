@@ -170,8 +170,8 @@ hr {
 }
 
 .recipe__nutrition-table {
+    table-layout: fixed;
     border-collapse: collapse;
-    border-spacing: 1rem;
     width: 100%;
     text-align: left;
 }
@@ -181,7 +181,36 @@ hr {
     line-height: 3em;
 }
 
+.recipe__nutrition-table th {
+    font-weight: normal;
+    padding-left: 2rem;
+}
+
 .recipe__nutrition-table td{
     color: var(--brown);
     font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    body {
+        margin: 0;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    .recipe {
+        min-width: 100vw;
+    }
+
+    .recipe__img {
+        border-radius: 0;
+        position: relative;
+        left: -2rem;
+        top: -2.5rem;
+        min-width: 100vw;
+        height: auto;
+        margin-bottom: -3rem;
+    }
 }
